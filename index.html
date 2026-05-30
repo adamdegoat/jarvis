@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jarvis · autonomous trading & research systems</title>
+<meta name="description" content="Jarvis — three autonomous, self-improving systems: Stocks, Crypto and a strategy Lab. One command center.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+:root{--bg:#070b16;--ink:#e8eef7;--muted:#8a99b5;--dim:#5d6b86;--line:rgba(148,163,184,.13)}
+html,body{height:100%}
+body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;
+  background-image:radial-gradient(1000px 560px at 16% -10%,rgba(56,189,248,.12),transparent 60%),radial-gradient(900px 520px at 86% 2%,rgba(168,85,247,.13),transparent 62%),radial-gradient(700px 600px at 50% 120%,rgba(34,197,94,.08),transparent 60%),linear-gradient(rgba(148,163,184,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.035) 1px,transparent 1px);
+  background-size:auto,auto,auto,46px 46px,46px 46px;background-attachment:fixed}
+.wrap{max-width:1080px;margin:0 auto;padding:64px 20px 70px;display:flex;flex-direction:column;min-height:100vh}
+.mono{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
+
+/* header */
+.head{text-align:center;margin-bottom:8px}
+.brand{display:inline-flex;align-items:center;gap:13px;justify-content:center}
+.brandmark{border-radius:13px;box-shadow:0 8px 26px rgba(56,189,248,.26),0 2px 8px rgba(0,0,0,.5)}
+.wordmark{font-family:'Space Grotesk','Inter',sans-serif;font-weight:700;font-size:44px;letter-spacing:-1.2px;color:#fff;line-height:1;margin:0}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:12px;letter-spacing:1.4px;color:var(--muted);text-transform:uppercase;font-weight:600}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.7);animation:pulse 1.9s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}70%{box-shadow:0 0 0 10px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.live{color:#22c55e;font-weight:800;letter-spacing:2.2px;text-shadow:0 0 12px rgba(34,197,94,.5)}
+.lede{max-width:620px;margin:20px auto 0;color:var(--muted);font-size:15px;line-height:1.65}
+.lede b{color:#cdd8ec;font-weight:600}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+.card{position:relative;display:flex;flex-direction:column;text-decoration:none;color:inherit;
+  background:linear-gradient(180deg,rgba(22,32,53,.6),rgba(15,23,42,.55));border:1px solid var(--line);border-radius:18px;padding:24px 22px 22px;overflow:hidden;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 12px 36px rgba(0,0,0,.36);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.card:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--accent);opacity:.85}
+.card:after{content:"";position:absolute;inset:0;background:radial-gradient(420px 200px at 50% -20%,var(--glow),transparent 70%);opacity:0;transition:opacity .22s ease;pointer-events:none}
+.card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 22px 54px rgba(0,0,0,.5),0 0 0 1px var(--accent)}
+.card:hover:after{opacity:.5}
+.ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:var(--chip);border:1px solid var(--accent);margin-bottom:16px}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:700}
+.cname{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:#fff;margin:6px 0 0;letter-spacing:-.4px}
+.cdesc{color:var(--muted);font-size:13.5px;line-height:1.6;margin:11px 0 0;flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chip{font-size:10.5px;font-weight:600;letter-spacing:.4px;color:#cdd8ec;background:rgba(148,163,184,.08);border:1px solid var(--line);border-radius:7px;padding:3px 9px}
+.enter{display:inline-flex;align-items:center;gap:7px;margin-top:20px;font-weight:700;font-size:13.5px;color:var(--accent);letter-spacing:.3px}
+.enter .arr{transition:transform .22s ease}
+.card:hover .enter .arr{transform:translateX(4px)}
+
+/* footer */
+.foot{margin-top:auto;padding-top:48px;text-align:center;color:var(--dim);font-size:11.5px;line-height:1.9}
+.foot a{color:var(--muted);text-decoration:none}
+.foot a:hover{color:#38bdf8}
+.sep{color:#2a3550;margin:0 8px}
+
+@media(max-width:820px){.grid{grid-template-columns:1fr;gap:14px}.wordmark{font-size:36px}.wrap{padding:48px 16px 56px}}
+</style></head>
+<body><div class="wrap">
+
+  <div class="head">
+    <div class="brand">
+      <svg class="brandmark" width="52" height="52" viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs><rect width="42" height="42" rx="11" fill="url(#cg)"/><g fill="#fff"><rect x="9.5" y="20.5" width="3.6" height="10" rx="1.4" opacity=".82"/><rect x="10.6" y="17.5" width="1.4" height="16" rx=".7" opacity=".55"/><rect x="19.2" y="14" width="3.6" height="17" rx="1.4"/><rect x="20.3" y="10.5" width="1.4" height="23" rx=".7" opacity=".6"/><rect x="28.9" y="11" width="3.6" height="13" rx="1.4" opacity=".82"/><rect x="30" y="8" width="1.4" height="18" rx=".7" opacity=".55"/></g></svg>
+      <h1 class="wordmark">Jarvis</h1>
+    </div>
+    <div class="status"><span class="dot"></span><span class="live">LIVE</span><span>· 3 autonomous systems · running 24/7</span></div>
+    <p class="lede">Three <b>self-improving</b> systems that research, decide and grade themselves — fully autonomous. Pick a desk to enter its live dashboard.</p>
+  </div>
+
+  <div class="grid">
+
+    <a class="card" href="https://adamdegoat.github.io/jarvisstocks/" style="--accent:#22c55e;--chip:rgba(34,197,94,.12);--glow:rgba(34,197,94,.22)">
+      <div class="ic">📈</div>
+      <div class="tag">Equities · Long-only</div>
+      <h2 class="cname">Jarvis Stocks</h2>
+      <p class="cdesc">Autonomous US stock swing-trader. Scans the market, surfaces only A+ long setups, sizes by risk and emails a daily report — learning from every decided trade.</p>
+      <div class="chips"><span class="chip">US equities</span><span class="chip">Swing</span><span class="chip">Self-improving</span><span class="chip">Daily report</span></div>
+      <span class="enter">Enter dashboard <span class="arr">→</span></span>
+    </a>
+
+    <a class="card" href="https://adamdegoat.github.io/jarviscrypto/" style="--accent:#38bdf8;--chip:rgba(56,189,248,.12);--glow:rgba(56,189,248,.24)">
+      <div class="ic">₿</div>
+      <div class="tag">Crypto · Long & Short</div>
+      <h2 class="cname">Jarvis Crypto</h2>
+      <p class="cdesc">Autonomous crypto portfolio, long and short, gated by a BTC-regime master switch. Six scans a day, paper-traded, with a shadow book that grades ideas it didn't take.</p>
+      <div class="chips"><span class="chip">24/7</span><span class="chip">6 scans/day</span><span class="chip">Long + short</span><span class="chip">Shadow book</span></div>
+      <span class="enter">Enter dashboard <span class="arr">→</span></span>
+    </a>
+
+    <a class="card" href="https://adamdegoat.github.io/jarvislab/" style="--accent:#a855f7;--chip:rgba(168,85,247,.12);--glow:rgba(168,85,247,.24)">
+      <div class="ic">🔬</div>
+      <div class="tag">Research · Strategy Lab</div>
+      <h2 class="cname">Jarvis Lab</h2>
+      <p class="cdesc">Autonomous strategy researcher. Invents its own strategies and puts each through a strict gauntlet — out-of-sample firewall, robustness, alpha-vs-benchmark and an adversarial red-team — before anything reaches the paper book.</p>
+      <div class="chips"><span class="chip">Invents strategies</span><span class="chip">8-gate gauntlet</span><span class="chip">Red-team</span><span class="chip">Daily</span></div>
+      <span class="enter">Enter dashboard <span class="arr">→</span></span>
+    </a>
+
+  </div>
+
+  <div class="foot">
+    Jarvis is a suite of autonomous paper-trading &amp; research systems for education and research — <b>not financial advice</b>.<br>
+    <span class="sep">·</span> built by Adamdegoat <span class="sep">·</span> powered by Claude <span class="sep">·</span>
+  </div>
+
+</div></body></html>
