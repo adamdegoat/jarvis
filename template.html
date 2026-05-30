@@ -42,7 +42,10 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 .track:hover{color:#38bdf8;border-color:rgba(56,189,248,.4)}
 
 /* cards */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:44px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:16px}
+.section-h{max-width:1080px;margin:42px auto 0;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:center}
+.section-h span{color:var(--dim);font-weight:500;letter-spacing:.4px;text-transform:none}
+.grid-lab{max-width:560px;margin-left:auto;margin-right:auto}
 .card{position:relative;display:flex;flex-direction:column;text-decoration:none;color:inherit;
   background:linear-gradient(180deg,rgba(22,32,53,.6),rgba(15,23,42,.55));border:1px solid var(--line);border-radius:18px;padding:24px 22px 22px;overflow:hidden;
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 12px 36px rgba(0,0,0,.36);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
@@ -129,6 +132,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
     <div class="step"><div class="step-n">3</div><div class="step-t">All <b>public &amp; paper-traded</b> — watch live</div></div>
   </div>
 
+  <div class="section-h">📈 The trading desks <span>· live paper portfolios · $10k each</span></div>
   <div class="grid">
 
     <a class="card" href="https://adamdegoat.github.io/jarvisstocks/" style="--accent:#22c55e;--chip:rgba(34,197,94,.12);--glow:rgba(34,197,94,.22)">
@@ -151,16 +155,6 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <span class="enter">Enter dashboard <span class="arr">→</span></span>
     </a>
 
-    <a class="card" href="https://adamdegoat.github.io/jarvislab/" style="--accent:#a855f7;--chip:rgba(168,85,247,.12);--glow:rgba(168,85,247,.24)">
-      <div class="ic">🔬</div>
-      <div class="tag">Research · Strategy Lab</div>
-      <h2 class="cname">Jarvis Lab</h2>
-      <p class="cdesc">An autonomous quant researcher that invents its own strategies — then tries to kill each one through an 8-gate gauntlet (out-of-sample firewall, robustness, alpha-vs-benchmark, adversarial red-team). Survivors reach the book — and now feed live signals to the Stocks desk.</p>
-      <div class="chips"><span class="chip">Invents strategies</span><span class="chip">8-gate gauntlet</span><span class="chip">Red-team</span><span class="chip">Daily</span></div>
-      <!--STATS_LAB-->
-      <span class="enter">Enter dashboard <span class="arr">→</span></span>
-    </a>
-
     <a class="card" href="https://adamdegoat.github.io/jarvisbitcoin/" style="--accent:#f7931a;--chip:rgba(247,147,26,.12);--glow:rgba(247,147,26,.24)">
       <div class="ic">⚡</div>
       <div class="tag">Crypto · Mechanical quant</div>
@@ -168,6 +162,21 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <p class="cdesc">A self-learning mechanical scalper across a 10-coin OKX perp basket. It backtests every edge over the whole basket, trades only the validated ones as maker limit orders, and learns pooled across coins — sharper every trade, with a portfolio risk layer keeping correlation in check.</p>
       <div class="chips"><span class="chip">10-coin basket</span><span class="chip">Maker limits</span><span class="chip">Gauntlet-tested</span><span class="chip">Self-learning</span></div>
       <!--STATS_BTC-->
+      <span class="enter">Enter dashboard <span class="arr">→</span></span>
+    </a>
+
+  </div>
+
+  <div class="section-h">🔬 The research lab <span>· invents &amp; validates the edges that feed the desks</span></div>
+  <div class="grid grid-lab">
+
+    <a class="card" href="https://adamdegoat.github.io/jarvislab/" style="--accent:#a855f7;--chip:rgba(168,85,247,.12);--glow:rgba(168,85,247,.24)">
+      <div class="ic">🔬</div>
+      <div class="tag">Research · Strategy incubator</div>
+      <h2 class="cname">Jarvis Lab</h2>
+      <p class="cdesc">An autonomous quant researcher that invents its own strategies — then tries to kill each one through an 8-gate gauntlet (out-of-sample firewall, robustness, alpha-vs-benchmark, adversarial red-team). Survivors reach the book — and now feed live signals to the Stocks desk.</p>
+      <div class="chips"><span class="chip">Invents strategies</span><span class="chip">8-gate gauntlet</span><span class="chip">Red-team</span><span class="chip">Daily</span></div>
+      <!--STATS_LAB-->
       <span class="enter">Enter dashboard <span class="arr">→</span></span>
     </a>
 
