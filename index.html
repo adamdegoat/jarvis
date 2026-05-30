@@ -53,20 +53,21 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 .sep{color:#2a3550;margin:0 8px}
 
 /* contact */
-.contact{margin-top:30px;background:linear-gradient(180deg,rgba(22,32,53,.6),rgba(15,23,42,.55));border:1px solid var(--line);border-radius:18px;padding:24px 24px 22px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 12px 36px rgba(0,0,0,.36)}
-.contact h3{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:#fff;margin:0 0 5px;letter-spacing:-.3px}
-.contact .csub{color:var(--muted);font-size:13px;margin:0 0 16px;line-height:1.55}
-.cform{display:flex;flex-direction:column;gap:11px}
-.crow{display:flex;gap:11px}
+.contact{max-width:600px;margin:30px auto 0;background:linear-gradient(180deg,rgba(22,32,53,.6),rgba(15,23,42,.55));border:1px solid var(--line);border-radius:15px;padding:17px 19px 15px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.34)}
+.contact h3{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;letter-spacing:-.3px}
+.contact .csub{color:var(--muted);font-size:12px;margin:0 0 12px;line-height:1.5}
+.contact .csub b{color:#cdd8ec;font-weight:600}
+.cform{display:flex;flex-direction:column;gap:8px}
+.crow{display:flex;gap:8px}
 .crow>*{flex:1;min-width:0}
-.cform input,.cform textarea{width:100%;background:rgba(8,12,22,.6);border:1px solid var(--line);border-radius:10px;padding:11px 13px;color:var(--ink);font-family:inherit;font-size:13.5px;outline:none;transition:border-color .18s ease,box-shadow .18s ease}
+.cform input,.cform textarea{width:100%;background:rgba(8,12,22,.6);border:1px solid var(--line);border-radius:9px;padding:8px 11px;color:var(--ink);font-family:inherit;font-size:12.5px;outline:none;transition:border-color .18s ease,box-shadow .18s ease}
 .cform input::placeholder,.cform textarea::placeholder{color:var(--dim)}
 .cform input:focus,.cform textarea:focus{border-color:#38bdf8;box-shadow:0 0 0 3px rgba(56,189,248,.13)}
-.cform textarea{resize:vertical;min-height:98px}
-.cbtn{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#2b4079,#38bdf8);color:#fff;font-weight:700;font-size:13.5px;border:none;border-radius:10px;padding:11px 22px;cursor:pointer;letter-spacing:.3px;transition:transform .16s ease,box-shadow .16s ease}
+.cform textarea{resize:vertical;min-height:64px}
+.cbtn{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#2b4079,#38bdf8);color:#fff;font-weight:700;font-size:12.5px;border:none;border-radius:9px;padding:9px 18px;cursor:pointer;letter-spacing:.3px;transition:transform .16s ease,box-shadow .16s ease}
 .cbtn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(56,189,248,.3)}
 .cbtn:disabled{opacity:.6;cursor:default;transform:none;box-shadow:none}
-.cnote{font-size:12.5px;min-height:18px;font-weight:600}
+.cnote{font-size:12px;min-height:16px;font-weight:600}
 .cnote.ok{color:#22c55e}.cnote.err{color:#f43f5e}
 .hp{position:absolute!important;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}
 
@@ -115,14 +116,14 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
   </div>
 
   <div class="contact">
-    <h3>Message the developer</h3>
-    <p class="csub">Questions, feedback, or spotted a bug? Drop a note and it goes straight to my inbox. Leave your email if you'd like a reply.</p>
+    <h3>💬 Message the developer</h3>
+    <p class="csub">Like what you see? <b>Got a project in mind, or want something like this built for you?</b> I'm open to new work, collabs, feedback and bug reports — drop a note and it lands straight in my inbox. Leave your email and I'll get back to you.</p>
     <form class="cform" id="contactForm" novalidate>
       <div class="crow">
         <input type="text" name="from_name" placeholder="Your name (optional)" autocomplete="name" maxlength="80">
         <input type="email" name="from_email" placeholder="Your email (optional — for a reply)" autocomplete="email" maxlength="120">
       </div>
-      <textarea name="message" placeholder="Your message…" required maxlength="2000"></textarea>
+      <textarea name="message" placeholder="Tell me about your project, idea, or feedback…" required maxlength="2000"></textarea>
       <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="cbtn" id="cbtn">Send message <span>→</span></button>
       <div class="cnote" id="cnote" role="status" aria-live="polite"></div>
