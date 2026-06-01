@@ -115,6 +115,16 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 .move-txt{color:var(--muted);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .move-time{color:var(--dim);font-size:11px;font-family:'IBM Plex Mono',monospace;flex:none}
 @media(max-width:700px){.step-arrow{display:none}.howto{flex-direction:column}.step{width:100%}.move-txt{white-space:normal}}
+/* l-system ladder */
+.lstair{display:flex;gap:0;margin-top:16px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.lrow{flex:1;padding:16px 14px;background:rgba(22,32,53,.45);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:7px;transition:background .2s}
+.lrow:last-child{border-right:none}
+.lrow-active{background:rgba(59,130,246,.07)}
+.lbadge{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--dim);background:rgba(148,163,184,.07);border:1px solid var(--line);border-radius:6px;padding:2px 8px;align-self:flex-start}
+.lbadge-active{color:#3b82f6;background:rgba(59,130,246,.14);border-color:rgba(59,130,246,.35)}
+.lrow-title{font-size:12.5px;font-weight:700;color:#cdd8ec}
+.lrow-desc{font-size:11.5px;color:var(--dim);line-height:1.5}
+@media(max-width:820px){.lstair{flex-direction:column;border-radius:12px}.lrow{border-right:none;border-bottom:1px solid var(--line)}.lrow:last-child{border-bottom:none}}
 </style></head>
 <body><div class="wrap">
 
@@ -123,7 +133,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <svg class="brandmark" width="52" height="52" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b4079"/><stop offset="1" stop-color="#0e1a35"/></linearGradient></defs><rect width="28" height="28" rx="7" fill="url(#cg)"/><path d="M14 5.4 Q14 14 22.6 14 Q14 14 14 22.6 Q14 14 5.4 14 Q14 14 14 5.4 Z" fill="#fff"/></svg>
       <h1 class="wordmark">Jarvis</h1>
     </div>
-    <div class="status"><span class="dot"></span><span class="live">LIVE</span><span>· 6 autonomous systems · running 24/7</span><span style="color:var(--dim);letter-spacing:1px"> · updated 14:09 SGT</span></div>
+    <div class="status"><span class="dot"></span><span class="live">LIVE</span><span>· 6 autonomous systems · running 24/7</span><span style="color:var(--dim);letter-spacing:1px"> · updated 14:13 SGT</span></div>
     <p class="lede">Six <b>self-improving AI systems</b> — four now at <b>L5</b>, the level where the brain learns which <em>families</em> of approaches produce durable edges. They research, decide, grade themselves, and get sharper with every trade. Pick a desk and watch it think.</p>
     <a class="track" href="https://adamdegoat.github.io/jarvisanalytics/">📊 View the live track record →</a>
   </div>
@@ -178,7 +188,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <h2 class="cname">Jarvis Scalper <span style="font-size:11px;font-weight:600;background:rgba(247,147,26,.15);color:#d97706;border-radius:20px;padding:2px 8px;vertical-align:middle;margin-left:4px">L5</span></h2>
       <p class="cdesc">An <b>L5 self-learning</b> mechanical scalper across a 10-coin OKX perp basket. It validates every strategy via a cost-aware gauntlet, trades only proven edges as maker limits, and now <b>tracks which strategy families (reversion / momentum / funding) pass the gauntlet</b> — biasing its reflection engine toward proven families.</p>
       <div class="chips"><span class="chip">10-coin basket</span><span class="chip">Maker limits</span><span class="chip">Gauntlet-tested</span><span class="chip">Family L5</span></div>
-      <div class="cstats"><div class="cstat"><div class="cs-l">Equity</div><div class="cs-v">$9,981</div></div><div class="cstat"><div class="cs-l">ROI</div><div class="cs-v" style="color:#f43f5e">-0.19%</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">2</div></div></div>
+      <div class="cstats"><div class="cstat"><div class="cs-l">Equity</div><div class="cs-v">$10,002</div></div><div class="cstat"><div class="cs-l">ROI</div><div class="cs-v" style="color:#22c55e">+0.02%</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">2</div></div></div>
       <span class="enter">Enter dashboard <span class="arr">→</span></span>
     </a>
 
@@ -188,10 +198,39 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <h2 class="cname">Jarvis Forex <span style="font-size:11px;font-weight:600;background:rgba(59,130,246,.15);color:#3b82f6;border-radius:20px;padding:2px 8px;vertical-align:middle;margin-left:4px">L5</span></h2>
       <p class="cdesc">An <b>L5 self-learning</b> forex scalper across a 4-pair basket: EUR/USD, GBP/USD, USD/JPY and AUD/USD. It validates every strategy via a cost-aware gauntlet, and now <b>tracks which signal families (reversion / momentum) produce durable edges per session</b> — biasing its reflection engine toward proven families. Built for live IBKR execution.</p>
       <div class="chips"><span class="chip">4-pair basket</span><span class="chip">Gauntlet-tested</span><span class="chip">Shadow book</span><span class="chip">Self-improving</span></div>
-      <div class="cstats"><div class="cstat"><div class="cs-l">Equity</div><div class="cs-v">$10,000</div></div><div class="cstat"><div class="cs-l">ROI</div><div class="cs-v" style="color:#ffffff">+0.00%</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">0</div></div></div>
+      <div class="cstats"><div class="cstat"><div class="cs-l">Equity</div><div class="cs-v">$10,000</div></div><div class="cstat"><div class="cs-l">ROI</div><div class="cs-v" style="color:#ffffff">-0.00%</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">0</div></div></div>
       <span class="enter">Enter dashboard <span class="arr">→</span></span>
     </a>
 
+  </div>
+
+  <div class="section-h">🧠 The L-system <span>· how self-improvement is measured across the fleet</span></div>
+  <div class="lstair">
+    <div class="lrow">
+      <span class="lbadge">L1</span>
+      <div class="lrow-title">Scheduled execution</div>
+      <div class="lrow-desc">Runs on a timer, applies fixed rules, generates reports. No learning — same output every run.</div>
+    </div>
+    <div class="lrow">
+      <span class="lbadge">L2</span>
+      <div class="lrow-title">Self-grading</div>
+      <div class="lrow-desc">Logs every outcome, tracks P&amp;L, and grades its own predictions against reality. Knows if it's winning or losing.</div>
+    </div>
+    <div class="lrow">
+      <span class="lbadge">L3</span>
+      <div class="lrow-title">Gauntlet-gated</div>
+      <div class="lrow-desc">Every strategy must pass an out-of-sample backtest before going live. Nothing trades without proof of edge.</div>
+    </div>
+    <div class="lrow">
+      <span class="lbadge">L4</span>
+      <div class="lrow-title">Signal invention</div>
+      <div class="lrow-desc">Invents its own features and scoring signals, validates each via the gauntlet, and deploys survivors. Discovers new edges autonomously.</div>
+    </div>
+    <div class="lrow lrow-active">
+      <span class="lbadge lbadge-active">L5 ✦</span>
+      <div class="lrow-title">Family intelligence</div>
+      <div class="lrow-desc">Groups signals into families, tracks which families produce durable edges over time, and biases the invention engine toward proven ones. The current ceiling.</div>
+    </div>
   </div>
 
   <div class="section-h">🔬 The research lab <span>· invents &amp; validates the edges that feed the desks</span></div>
@@ -209,7 +248,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 
   </div>
 
-  <div class="moves"><div class="moves-h">◇ Latest moves <span class="moves-live">live</span></div><div class="move"><span class="move-dot" style="background:#22c55e"></span><span class="move-sys">Stocks</span><span class="move-txt">EXIT META — 1D Supertrend BEARISH ($647.22 resistance) + price below E…</span><span class="move-time">2h ago</span></div><div class="move"><span class="move-dot" style="background:#38bdf8"></span><span class="move-sys">Crypto</span><span class="move-txt">HOLD CASH — </span><span class="move-time">2h ago</span></div><div class="move"><span class="move-dot" style="background:#a855f7"></span><span class="move-sys">Lab</span><span class="move-txt">Incubating stock_leader_momentum_v1 on AMZN</span><span class="move-time">2d ago</span></div><div class="move"><span class="move-dot" style="background:#f7931a"></span><span class="move-sys">Scalper</span><span class="move-txt">Closed long ETH vwap_revert -6.70 net</span><span class="move-time">3h ago</span></div><div class="move"><span class="move-dot" style="background:#3B82F6"></span><span class="move-sys">Forex</span><span class="move-txt">Flat — scanning EUR/USD, GBP/USD, USD/JPY, AUD/USD</span><span class="move-time"></span></div></div>
+  <div class="moves"><div class="moves-h">◇ Latest moves <span class="moves-live">live</span></div><div class="move"><span class="move-dot" style="background:#22c55e"></span><span class="move-sys">Stocks</span><span class="move-txt">EXIT META — 1D Supertrend BEARISH ($647.22 resistance) + price below E…</span><span class="move-time">2h ago</span></div><div class="move"><span class="move-dot" style="background:#38bdf8"></span><span class="move-sys">Crypto</span><span class="move-txt">HOLD CASH — </span><span class="move-time">2h ago</span></div><div class="move"><span class="move-dot" style="background:#a855f7"></span><span class="move-sys">Lab</span><span class="move-txt">Incubating stock_leader_momentum_v1 on AMZN</span><span class="move-time">2d ago</span></div><div class="move"><span class="move-dot" style="background:#f7931a"></span><span class="move-sys">Scalper</span><span class="move-txt">Closed long ETH vwap_revert -6.70 net</span><span class="move-time">3h ago</span></div><div class="move"><span class="move-dot" style="background:#3B82F6"></span><span class="move-sys">Forex</span><span class="move-txt">Holding 1 — short EUR/USD vwap_revert</span><span class="move-time"></span></div></div>
 
   <div class="contact">
     <h3>💬 Message the developer</h3>
