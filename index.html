@@ -125,6 +125,33 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 .lrow-title{font-size:12.5px;font-weight:700;color:#cdd8ec}
 .lrow-desc{font-size:11.5px;color:var(--dim);line-height:1.5}
 @media(max-width:820px){.lstair{flex-direction:column;border-radius:12px}.lrow{border-right:none;border-bottom:1px solid var(--line)}.lrow:last-child{border-bottom:none}}
+
+/* deep-dive section */
+.deepdive{margin-top:16px}
+.dd-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:0}
+.dd-tab{display:flex;align-items:center;gap:7px;background:rgba(148,163,184,.06);border:1px solid var(--line);border-bottom:2px solid transparent;border-radius:10px 10px 0 0;padding:9px 16px;cursor:pointer;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.4px;color:var(--muted);transition:color .18s,background .18s,border-color .18s;position:relative}
+.dd-tab:hover{color:#e8eef7;background:rgba(148,163,184,.10)}
+.dd-tab.active{color:#fff;background:linear-gradient(180deg,rgba(22,32,53,.7),rgba(15,23,42,.65));border-color:rgba(148,163,184,.18);border-bottom-color:var(--tc,#38bdf8);box-shadow:0 -4px 12px rgba(0,0,0,.25)}
+.dd-dot{width:8px;height:8px;border-radius:50%;background:var(--tc,#38bdf8);flex:none;box-shadow:0 0 6px var(--tc,#38bdf8)}
+.dd-content{background:linear-gradient(180deg,rgba(22,32,53,.62),rgba(15,23,42,.55));border:1px solid var(--line);border-radius:0 12px 12px 12px;padding:24px 22px 22px;backdrop-filter:blur(14px);box-shadow:0 12px 36px rgba(0,0,0,.34);min-height:300px}
+.dd-panel{display:none;animation:ddFadeIn .22s ease}
+.dd-panel.active{display:block}
+@keyframes ddFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.dd-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:6px}
+.dd-icon{font-size:28px;line-height:1;margin-bottom:6px}
+.dd-name{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#fff;letter-spacing:-.4px}
+.dd-meta{color:var(--muted);font-size:12px;margin-top:3px;font-weight:500}
+.dd-lbadge{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--tc,#38bdf8);background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.3);border-radius:8px;padding:4px 11px;flex:none;align-self:flex-start;white-space:nowrap}
+.dd-tagline{font-size:14px;color:#cdd8ec;font-style:italic;margin:10px 0 18px;padding-left:1px;line-height:1.5;border-left:3px solid var(--tc,#38bdf8);padding-left:12px}
+.dd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
+.dd-block{background:rgba(148,163,184,.04);border:1px solid var(--line);border-radius:10px;padding:14px 15px}
+.dd-bh{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--tc,#38bdf8);font-weight:700;margin-bottom:8px}
+.dd-bt{font-size:12.5px;color:var(--muted);line-height:1.65}
+.dd-bt b{color:#cdd8ec;font-weight:600}
+.dd-sources{display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding-top:14px;border-top:1px solid var(--line)}
+.dd-sh{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim);font-weight:600;flex:none}
+.dd-chip{font-size:11px;font-weight:600;color:#cdd8ec;background:rgba(148,163,184,.08);border:1px solid var(--line);border-radius:6px;padding:3px 9px}
+@media(max-width:760px){.dd-grid{grid-template-columns:1fr}.dd-tabs{gap:5px}.dd-tab{padding:7px 11px;font-size:11px}.dd-name{font-size:18px}}
 </style></head>
 <body><div class="wrap">
 
@@ -133,7 +160,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <svg class="brandmark" width="52" height="52" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b4079"/><stop offset="1" stop-color="#0e1a35"/></linearGradient></defs><rect width="28" height="28" rx="7" fill="url(#cg)"/><path d="M14 5.4 Q14 14 22.6 14 Q14 14 14 22.6 Q14 14 5.4 14 Q14 14 14 5.4 Z" fill="#fff"/></svg>
       <h1 class="wordmark">Jarvis</h1>
     </div>
-    <div class="status"><span class="dot"></span><span class="live">LIVE</span><span>· 6 autonomous systems · running 24/7</span><span style="color:var(--dim);letter-spacing:1px"> · updated 16:06 SGT</span></div>
+    <div class="status"><span class="dot"></span><span class="live">LIVE</span><span>· 6 autonomous systems · running 24/7</span><span style="color:var(--dim);letter-spacing:1px"> · updated 16:13 SGT</span></div>
     <p class="lede">Six <b>self-improving AI systems</b> — four now at <b>L5</b>, the level where the brain learns which <em>families</em> of approaches produce durable edges. They research, decide, grade themselves, and get sharper with every trade. Pick a desk and watch it think.</p>
     <a class="track" href="https://adamdegoat.github.io/jarvisanalytics/">📊 View the live track record →</a>
   </div>
@@ -184,7 +211,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <h2 class="cname">Jarvis Stocks <span style="font-size:11px;font-weight:600;background:rgba(34,197,94,.15);color:#16a34a;border-radius:20px;padding:2px 8px;vertical-align:middle;margin-left:4px">L4+L5</span></h2>
       <p class="cdesc">A <b>L4+L5 self-improving</b> AI portfolio for US stocks. It hunts A+ long setups, cross-checks against Jarvis Lab's gauntlet-validated signals, and now <b>invents its own scoring signals</b> — validating each candidate against 2 years of history via a 5-gate gauntlet before it ever influences a real trade. The only desk in the fleet that discovers its own edge.</p>
       <div class="chips"><span class="chip">US equities</span><span class="chip">Swing</span><span class="chip">Self-improving</span><span class="chip">Daily report</span></div>
-      <div class="cstats"><div class="cstat"><div class="cs-l">Equity</div><div class="cs-v">$10,435</div></div><div class="cstat"><div class="cs-l">ROI</div><div class="cs-v" style="color:#22c55e">+4.35%</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">3</div></div></div>
+      <div class="cstats"><div class="cstat"><div class="cs-l">Equity</div><div class="cs-v">$10,433</div></div><div class="cstat"><div class="cs-l">ROI</div><div class="cs-v" style="color:#22c55e">+4.33%</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">3</div></div></div>
       <span class="enter">Enter dashboard <span class="arr">→</span></span>
     </a>
 
@@ -204,7 +231,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <h2 class="cname">Jarvis Scalper <span style="font-size:11px;font-weight:600;background:rgba(247,147,26,.15);color:#d97706;border-radius:20px;padding:2px 8px;vertical-align:middle;margin-left:4px">L5</span></h2>
       <p class="cdesc">An <b>L5 self-learning</b> mechanical scalper across a 10-coin OKX perp basket. It validates every strategy via a cost-aware gauntlet, trades only proven edges as maker limits, and now <b>tracks which strategy families (reversion / momentum / funding) pass the gauntlet</b> — biasing its reflection engine toward proven families.</p>
       <div class="chips"><span class="chip">10-coin basket</span><span class="chip">Maker limits</span><span class="chip">Gauntlet-tested</span><span class="chip">Family L5</span></div>
-      <div class="cstats"><div class="cstat"><div class="cs-l">Equity</div><div class="cs-v">$10,010</div></div><div class="cstat"><div class="cs-l">ROI</div><div class="cs-v" style="color:#22c55e">+0.10%</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">2</div></div></div>
+      <div class="cstats"><div class="cstat"><div class="cs-l">Equity</div><div class="cs-v">$10,005</div></div><div class="cstat"><div class="cs-l">ROI</div><div class="cs-v" style="color:#22c55e">+0.05%</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">2</div></div></div>
       <span class="enter">Enter dashboard <span class="arr">→</span></span>
     </a>
 
@@ -245,7 +272,160 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 
   </div>
 
-  <div class="moves"><div class="moves-h">◇ Latest moves <span class="moves-live">live</span></div><div class="move"><span class="move-dot" style="background:#22c55e"></span><span class="move-sys">Stocks</span><span class="move-txt">EXIT META — 1D Supertrend BEARISH ($647.22 resistance) + price below E…</span><span class="move-time">4h ago</span></div><div class="move"><span class="move-dot" style="background:#38bdf8"></span><span class="move-sys">Crypto</span><span class="move-txt">HOLD CASH — </span><span class="move-time">4h ago</span></div><div class="move"><span class="move-dot" style="background:#a855f7"></span><span class="move-sys">Lab</span><span class="move-txt">Incubating stock_leader_momentum_v1 on AMZN</span><span class="move-time">2d ago</span></div><div class="move"><span class="move-dot" style="background:#f7931a"></span><span class="move-sys">Scalper</span><span class="move-txt">Closed long ETH vwap_revert -6.70 net</span><span class="move-time">5h ago</span></div><div class="move"><span class="move-dot" style="background:#3B82F6"></span><span class="move-sys">Forex</span><span class="move-txt">Closed short EUR/USD vwap_revert +0.06 net</span><span class="move-time">1h ago</span></div></div>
+  <div class="moves"><div class="moves-h">◇ Latest moves <span class="moves-live">live</span></div><div class="move"><span class="move-dot" style="background:#22c55e"></span><span class="move-sys">Stocks</span><span class="move-txt">EXIT META — 1D Supertrend BEARISH ($647.22 resistance) + price below E…</span><span class="move-time">4h ago</span></div><div class="move"><span class="move-dot" style="background:#38bdf8"></span><span class="move-sys">Crypto</span><span class="move-txt">Held cash — BTC BEAR regime, no setup cleared gates</span><span class="move-time">13m ago</span></div><div class="move"><span class="move-dot" style="background:#a855f7"></span><span class="move-sys">Lab</span><span class="move-txt">Incubating stock_leader_momentum_v1 on AMZN</span><span class="move-time">2d ago</span></div><div class="move"><span class="move-dot" style="background:#f7931a"></span><span class="move-sys">Scalper</span><span class="move-txt">Closed long ETH vwap_revert -6.70 net</span><span class="move-time">5h ago</span></div><div class="move"><span class="move-dot" style="background:#3B82F6"></span><span class="move-sys">Forex</span><span class="move-txt">Closed short EUR/USD vwap_revert +0.06 net</span><span class="move-time">1h ago</span></div></div>
+
+  <div class="section-h" style="margin-top:46px">🔍 Inside each system <span>· click to explore how the brains actually work</span></div>
+  <div class="deepdive">
+    <div class="dd-tabs" role="tablist">
+      <button class="dd-tab active" data-tab="stocks" style="--tc:#22c55e" role="tab"><span class="dd-dot" style="--tc:#22c55e"></span>Stocks</button>
+      <button class="dd-tab" data-tab="crypto" style="--tc:#38bdf8" role="tab"><span class="dd-dot" style="--tc:#38bdf8"></span>Crypto</button>
+      <button class="dd-tab" data-tab="scalper" style="--tc:#f7931a" role="tab"><span class="dd-dot" style="--tc:#f7931a"></span>Scalper</button>
+      <button class="dd-tab" data-tab="forex" style="--tc:#3B82F6" role="tab"><span class="dd-dot" style="--tc:#3B82F6"></span>Forex</button>
+      <button class="dd-tab" data-tab="carry" style="--tc:#14b8a6" role="tab"><span class="dd-dot" style="--tc:#14b8a6"></span>Carry</button>
+      <button class="dd-tab" data-tab="lab" style="--tc:#a855f7" role="tab"><span class="dd-dot" style="--tc:#a855f7"></span>Lab</button>
+    </div>
+    <div class="dd-content">
+
+      <div class="dd-panel active" id="dd-stocks" style="--tc:#22c55e">
+        <div class="dd-head">
+          <div><div class="dd-icon">📈</div><div class="dd-name">Jarvis Stocks</div><div class="dd-meta">US equities · Long-only · Daily report</div></div>
+          <div class="dd-lbadge" style="color:#22c55e;background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.3)">L4 + L5</div>
+        </div>
+        <div class="dd-tagline">"It invents its own trading signals from scratch — then grades every call against reality to get sharper."</div>
+        <div class="dd-grid">
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#22c55e">What it does</div>
+            <div class="dd-bt">Scans the full US equity universe every morning. Builds a momentum + multi-timeframe rank across stocks that meet minimum liquidity, then filters to only <b>A+ long setups</b> where price structure, volume, and sector strength all agree. Longs only — no shorting.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#22c55e">The AI layer</div>
+            <div class="dd-bt"><b>Claude Opus</b> reads the mechanical screen data, sector heat, macro backdrop, and its own historical calibration log — then writes the daily report, sizes each position in R, and justifies every call. Every outcome is logged and fed back into the next prompt.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#22c55e">Self-improvement engine</div>
+            <div class="dd-bt"><b>L4:</b> Invents its own scoring signals from raw price data — each candidate stress-tested through a 5-gate gauntlet before influencing a trade. <b>L5:</b> Tracks which <em>families</em> of signals (momentum, earnings-drift, mean-reversion) produce durable alpha vs SPY, then steers the invention engine toward better families.</div>
+          </div>
+        </div>
+        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">Yahoo Finance (1yr OHLCV)</span><span class="dd-chip">Jarvis Lab signals</span><span class="dd-chip">SPY / QQQ regime</span><span class="dd-chip">Historical trade log</span></div>
+      </div>
+
+      <div class="dd-panel" id="dd-crypto" style="--tc:#38bdf8">
+        <div class="dd-head">
+          <div><div class="dd-icon">₿</div><div class="dd-name">Jarvis Crypto</div><div class="dd-meta">OKX-tradable coins · Long + Short · 6 scans/day</div></div>
+          <div class="dd-lbadge" style="color:#38bdf8;background:rgba(56,189,248,.12);border-color:rgba(56,189,248,.3)">L5</div>
+        </div>
+        <div class="dd-tagline">"BTC calls the regime. The system calls the trades. No guessing direction without knowing the macro."</div>
+        <div class="dd-grid">
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#38bdf8">What it does</div>
+            <div class="dd-bt">Scans 20+ OKX-tradable coins six times a day. The <b>BTC regime</b> is the master gate — BULL unlocks longs, BEAR unlocks shorts, and extreme regimes boost position size. No coin trade is placed without first knowing what BTC is doing structurally.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#38bdf8">The AI layer</div>
+            <div class="dd-bt"><b>Claude Sonnet</b> (regular scans) and <b>Claude Opus</b> (authoritative daily) analyze funding rates, open interest, liquidation cascades, fear &amp; greed, and BTC dominance. Every rotation order includes explicit reasoning. Near-misses — setups that almost triggered — are logged for the learning engine.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#38bdf8">Self-improvement engine</div>
+            <div class="dd-bt"><b>L5:</b> Classifies signals into families — momentum, mean-reversion, funding-rate divergence, OI anomaly. Tracks which families have actually predicted outcomes vs which just looked good on paper. Discounts lagging indicators over time and weights leading ones higher in future prompts.</div>
+          </div>
+        </div>
+        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">Binance (OHLCV, primary)</span><span class="dd-chip">Coinalyze (liquidations + OI)</span><span class="dd-chip">Alternative.me (fear/greed)</span><span class="dd-chip">CoinGecko (BTC dominance)</span><span class="dd-chip">OKX (execution gate)</span></div>
+      </div>
+
+      <div class="dd-panel" id="dd-scalper" style="--tc:#f7931a">
+        <div class="dd-head">
+          <div><div class="dd-icon">⚡</div><div class="dd-name">Jarvis Scalper</div><div class="dd-meta">10-coin OKX perp basket · Mechanical quant · 5-min loop</div></div>
+          <div class="dd-lbadge" style="color:#f7931a;background:rgba(247,147,26,.12);border-color:rgba(247,147,26,.3)">L5</div>
+        </div>
+        <div class="dd-tagline">"Fully mechanical in execution — Claude only touches strategy invention and weekly reflection, never individual trades."</div>
+        <div class="dd-grid">
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#f7931a">What it does</div>
+            <div class="dd-bt">A Python loop that runs every 5 minutes across a 10-coin OKX perpetual basket. Places <b>maker limit orders only</b> — no taker fills — when the measured edge exceeds a cost model that includes taker fee, bid-ask spread, historical slippage per coin, and funding rate exposure.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#f7931a">The AI layer</div>
+            <div class="dd-bt"><b>Claude Opus</b> runs a weekly deep reflection — reviews which strategy variants passed the gauntlet and which failed in live paper trading, invents 3–5 new variants, then runs each through a cost-aware backtest on real OKX 5-minute bars. No Claude in the 5-minute trading loop itself.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#f7931a">Self-improvement engine</div>
+            <div class="dd-bt"><b>L5:</b> Every strategy is tagged by family — momentum, mean-reversion, funding-capture. The system tracks each family's gauntlet pass rate and live Sharpe independently. When inventing new strategies, it biases 60% of invention effort toward the family with the best track record.</div>
+          </div>
+        </div>
+        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">OKX (5m OHLCV)</span><span class="dd-chip">OKX (order book depth)</span><span class="dd-chip">OKX (funding rates)</span><span class="dd-chip">Cost model per coin</span></div>
+      </div>
+
+      <div class="dd-panel" id="dd-forex" style="--tc:#3B82F6">
+        <div class="dd-head">
+          <div><div class="dd-icon">💱</div><div class="dd-name">Jarvis Forex</div><div class="dd-meta">EUR/USD · GBP/USD · USD/JPY · AUD/USD · Session-aware</div></div>
+          <div class="dd-lbadge" style="color:#3B82F6;background:rgba(59,130,246,.12);border-color:rgba(59,130,246,.3)">L5</div>
+        </div>
+        <div class="dd-tagline">"The same signal performs differently in London open vs NY close — so the brain learns by session, not just by strategy."</div>
+        <div class="dd-grid">
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#3B82F6">What it does</div>
+            <div class="dd-bt">Scalps the four major FX pairs across active trading sessions. It knows the difference between London breakout, NY momentum, and Asian consolidation — and adjusts position sizing and signal filters accordingly. <b>Session-awareness</b> is built into the strategy tagging, not bolted on.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#3B82F6">The AI layer</div>
+            <div class="dd-bt"><b>Claude Opus</b> weekly reflection — reviews session-by-session family performance, invents new strategy variants tuned to specific sessions and pair characteristics, then validates each through a <b>spread + swap cost-aware</b> gauntlet on 5-minute historical bars. Losses in one session window don't contaminate another.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#3B82F6">Self-improvement engine</div>
+            <div class="dd-bt"><b>L5:</b> A strategy that works in London breakout but fails in NY consolidation is labeled and scored independently per session. Family insights (breakout, carry, mean-reversion, momentum) are tracked per pair and per session window — the invention engine steers toward combinations that have proven durable.</div>
+          </div>
+        </div>
+        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">yfinance (5m FX bars)</span><span class="dd-chip">Session clock (London/NY/Asia)</span><span class="dd-chip">Spread model per pair</span><span class="dd-chip">IBKR (planned live feed)</span></div>
+      </div>
+
+      <div class="dd-panel" id="dd-carry" style="--tc:#14b8a6">
+        <div class="dd-head">
+          <div><div class="dd-icon">💰</div><div class="dd-name">Jarvis Carry</div><div class="dd-meta">Delta-neutral · OKX funding capture · 8h income</div></div>
+          <div class="dd-lbadge" style="color:#14b8a6;background:rgba(20,184,166,.12);border-color:rgba(20,184,166,.3)">L5</div>
+        </div>
+        <div class="dd-tagline">"No price prediction. No directional bet. Just collecting the tax that overleveraged longs pay every 8 hours."</div>
+        <div class="dd-grid">
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#14b8a6">What it does</div>
+            <div class="dd-bt">Shorts OKX perpetual futures and simultaneously longs the equivalent in spot — so price moves cancel out perfectly. What remains is the <b>funding payment</b> OKX charges longs every 8 hours when retail sentiment is bullish. The system collects this income while taking zero directional risk.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#14b8a6">The AI layer</div>
+            <div class="dd-bt"><b>Claude Opus</b> weekly reflection — grades which carry strategy families produced the most durable income across the full coin universe, invents new entry/exit variants (different rate thresholds, OI filters, regime gates), and validates each on OKX funding rate history. The BTC regime from Jarvis Crypto feeds in as a live gate.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#14b8a6">Self-improvement engine</div>
+            <div class="dd-bt"><b>L5:</b> Six strategy families tracked — rate threshold, momentum carry, regime-gated, OI-filtered, multi-coin rotation, liquidation-filtered. The invention engine biases toward families with higher gauntlet pass rates and better realized Sharpe. Currently monitoring in BEAR regime; activates when rates rise.</div>
+          </div>
+        </div>
+        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">OKX public API (funding rates)</span><span class="dd-chip">OKX (mark prices + OI)</span><span class="dd-chip">Jarvis Crypto (BTC regime)</span><span class="dd-chip">Coinalyze (liquidations)</span></div>
+      </div>
+
+      <div class="dd-panel" id="dd-lab" style="--tc:#a855f7">
+        <div class="dd-head">
+          <div><div class="dd-icon">🔬</div><div class="dd-name">Jarvis Lab</div><div class="dd-meta">Autonomous quant researcher · Feeds signals to Stocks</div></div>
+          <div class="dd-lbadge" style="color:#a855f7;background:rgba(168,85,247,.12);border-color:rgba(168,85,247,.3)">L3 Gauntlet</div>
+        </div>
+        <div class="dd-tagline">"It invents a strategy — then immediately tries to destroy it. Only what survives the adversarial attack goes live."</div>
+        <div class="dd-grid">
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#a855f7">What it does</div>
+            <div class="dd-bt">Invents trading strategies from scratch every day — then runs each through an <b>8-gate gauntlet</b> designed to kill anything that looks good by luck. Survivors reach the incubation book and feed live signals directly into the Jarvis Stocks desk's daily analysis.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#a855f7">The AI layer</div>
+            <div class="dd-bt"><b>Claude Opus</b> (daily, autonomous) brainstorms a hypothesis, writes a backtest, runs it on out-of-sample data — then calls a <b>second Claude instance</b> to play adversarial red-team. The red-team's job is to find every way the strategy could fail: regime dependency, data snooping, cost sensitivity. If it survives the attack, it passes.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#a855f7">The 8-gate gauntlet</div>
+            <div class="dd-bt"><b>1</b> OOS firewall (no lookahead) · <b>2</b> Multiple-testing correction · <b>3</b> Robustness sweep (±20% params) · <b>4</b> Alpha vs SPY benchmark · <b>5</b> Adversarial red-team · <b>6</b> Parameter sensitivity · <b>7</b> Regime breakdown (bull/bear/flat) · <b>8</b> Liquidity check. All 8 must pass.</div>
+          </div>
+        </div>
+        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">yfinance (equities, 2yr)</span><span class="dd-chip">Cross-asset macro</span><span class="dd-chip">Jarvis Stocks performance log</span><span class="dd-chip">Historical gauntlet results</span></div>
+      </div>
+
+    </div>
+  </div>
 
   <div class="contact">
     <h3>💬 Message the developer</h3>
@@ -302,6 +482,22 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
     }).catch(function(){
       note.className='cnote err'; note.textContent='Network error — please try again.';
     }).then(function(){ btn.disabled=false; btn.innerHTML=label; });
+  });
+})();
+</script>
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.dd-tab');
+  var panels = document.querySelectorAll('.dd-panel');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var target = this.dataset.tab;
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      var panel = document.getElementById('dd-' + target);
+      if(panel) panel.classList.add('active');
+    });
   });
 })();
 </script>
