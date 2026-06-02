@@ -243,7 +243,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#22c55e">The AI layer</div>
-            <div class="dd-bt"><b>Claude Opus</b> reads the mechanical screen data, sector heat, macro backdrop, and its own historical calibration log — then writes the daily report, sizes each position in R, and justifies every call. Every outcome is logged and fed back into the next prompt.</div>
+            <div class="dd-bt"><b>Claude Sonnet</b> reads the mechanical screen data, sector heat, macro backdrop, and its own historical calibration log — then writes the daily report, sizes each position in R, and justifies every call. Every outcome is logged and fed back into the next prompt.</div>
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#22c55e">Self-improvement engine</div>
@@ -255,48 +255,48 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 
       <div class="dd-panel" id="dd-crypto" style="--tc:#38bdf8">
         <div class="dd-head">
-          <div><div class="dd-icon">₿</div><div class="dd-name">Jarvis Crypto</div><div class="dd-meta">OKX-tradable coins · Long + Short · 6 scans/day</div></div>
+          <div><div class="dd-icon">₿</div><div class="dd-name">Jarvis Crypto</div><div class="dd-meta">Binance-tradable coins · Long + Short · 6 scans/day</div></div>
           <div class="dd-lbadge" style="color:#38bdf8;background:rgba(56,189,248,.12);border-color:rgba(56,189,248,.3)">L5</div>
         </div>
         <div class="dd-tagline">"BTC calls the regime. The system calls the trades. No guessing direction without knowing the macro."</div>
         <div class="dd-grid">
           <div class="dd-block">
             <div class="dd-bh" style="color:#38bdf8">What it does</div>
-            <div class="dd-bt">Scans 20+ OKX-tradable coins six times a day. The <b>BTC regime</b> is the master gate — BULL unlocks longs, BEAR unlocks shorts, and extreme regimes boost position size. No coin trade is placed without first knowing what BTC is doing structurally.</div>
+            <div class="dd-bt">Scans 20+ Binance-tradable coins six times a day. The <b>BTC regime</b> is the master gate — BULL unlocks longs, BEAR unlocks shorts, and extreme regimes boost position size. No coin trade is placed without first knowing what BTC is doing structurally.</div>
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#38bdf8">The AI layer</div>
-            <div class="dd-bt"><b>Claude Sonnet</b> (regular scans) and <b>Claude Opus</b> (authoritative daily) analyze funding rates, open interest, liquidation cascades, fear &amp; greed, and BTC dominance. Every rotation order includes explicit reasoning. Near-misses — setups that almost triggered — are logged for the learning engine.</div>
+            <div class="dd-bt"><b>Claude Sonnet</b> (all scans, including the daily authoritative run) analyzes funding rates, open interest, liquidation cascades, fear &amp; greed, and BTC dominance. Every rotation order includes explicit reasoning. Near-misses — setups that almost triggered — are logged for the learning engine.</div>
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#38bdf8">Self-improvement engine</div>
             <div class="dd-bt"><b>L5:</b> Classifies signals into families — momentum, mean-reversion, funding-rate divergence, OI anomaly. Tracks which families have actually predicted outcomes vs which just looked good on paper. Discounts lagging indicators over time and weights leading ones higher in future prompts.</div>
           </div>
         </div>
-        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">Binance (OHLCV, primary)</span><span class="dd-chip">Coinalyze (liquidations + OI)</span><span class="dd-chip">Alternative.me (fear/greed)</span><span class="dd-chip">CoinGecko (BTC dominance)</span><span class="dd-chip">OKX (execution gate)</span></div>
+        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">Binance (OHLCV + execution)</span><span class="dd-chip">Coinalyze (liquidations + OI)</span><span class="dd-chip">Alternative.me (fear/greed)</span><span class="dd-chip">CoinGecko (BTC dominance)</span></div>
       </div>
 
       <div class="dd-panel" id="dd-scalper" style="--tc:#f7931a">
         <div class="dd-head">
-          <div><div class="dd-icon">⚡</div><div class="dd-name">Jarvis Scalper</div><div class="dd-meta">10-coin OKX perp basket · Mechanical quant · 5-min loop</div></div>
+          <div><div class="dd-icon">⚡</div><div class="dd-name">Jarvis Scalper</div><div class="dd-meta">10-coin Binance perp basket · Mechanical quant · 5-min loop</div></div>
           <div class="dd-lbadge" style="color:#f7931a;background:rgba(247,147,26,.12);border-color:rgba(247,147,26,.3)">L5</div>
         </div>
-        <div class="dd-tagline">"Fully mechanical in execution — Claude only touches strategy invention and weekly reflection, never individual trades."</div>
+        <div class="dd-tagline">"Fully mechanical in execution — Claude only touches strategy invention and 6×-daily reflection, never individual trades."</div>
         <div class="dd-grid">
           <div class="dd-block">
             <div class="dd-bh" style="color:#f7931a">What it does</div>
-            <div class="dd-bt">A Python loop that runs every 5 minutes across a 10-coin OKX perpetual basket. Places <b>maker limit orders only</b> — no taker fills — when the measured edge exceeds a cost model that includes taker fee, bid-ask spread, historical slippage per coin, and funding rate exposure.</div>
+            <div class="dd-bt">A Python loop that runs every 5 minutes across a 10-coin Binance perpetual basket. Places <b>maker limit orders only</b> — no taker fills — when the measured edge exceeds a cost model that includes taker fee, bid-ask spread, historical slippage per coin, and funding rate exposure.</div>
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#f7931a">The AI layer</div>
-            <div class="dd-bt"><b>Claude Opus</b> runs a weekly deep reflection — reviews which strategy variants passed the gauntlet and which failed in live paper trading, invents 3–5 new variants, then runs each through a cost-aware backtest on real OKX 5-minute bars. No Claude in the 5-minute trading loop itself.</div>
+            <div class="dd-bt"><b>Claude Sonnet</b> runs 6×-daily reflections — reviews which strategy variants passed the gauntlet and which failed in live paper trading, invents new variants, then runs each through a cost-aware backtest on real Binance 1h bars. No Claude in the 5-minute trading loop itself.</div>
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#f7931a">Self-improvement engine</div>
             <div class="dd-bt"><b>L5:</b> Every strategy is tagged by family — momentum, mean-reversion, funding-capture. The system tracks each family's gauntlet pass rate and live Sharpe independently. When inventing new strategies, it biases 60% of invention effort toward the family with the best track record.</div>
           </div>
         </div>
-        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">OKX (5m OHLCV)</span><span class="dd-chip">OKX (order book depth)</span><span class="dd-chip">OKX (funding rates)</span><span class="dd-chip">Cost model per coin</span></div>
+        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">Binance (1h OHLCV)</span><span class="dd-chip">Binance (funding rates)</span><span class="dd-chip">Cost model per coin</span></div>
       </div>
 
       <div class="dd-panel" id="dd-forex" style="--tc:#3B82F6">
@@ -312,7 +312,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#3B82F6">The AI layer</div>
-            <div class="dd-bt"><b>Claude Opus</b> weekly reflection — reviews session-by-session family performance, invents new strategy variants tuned to specific sessions and pair characteristics, then validates each through a <b>spread + swap cost-aware</b> gauntlet on 5-minute historical bars. Losses in one session window don't contaminate another.</div>
+            <div class="dd-bt"><b>Claude Sonnet</b> 6×-daily reflection — reviews session-by-session family performance, invents new strategy variants tuned to specific sessions and pair characteristics, then validates each through a <b>spread + swap cost-aware</b> gauntlet on 5-minute historical bars. Losses in one session window don't contaminate another.</div>
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#3B82F6">Self-improvement engine</div>
@@ -324,25 +324,25 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 
       <div class="dd-panel" id="dd-carry" style="--tc:#14b8a6">
         <div class="dd-head">
-          <div><div class="dd-icon">💰</div><div class="dd-name">Jarvis Carry</div><div class="dd-meta">Delta-neutral · OKX funding capture · 8h income</div></div>
+          <div><div class="dd-icon">💰</div><div class="dd-name">Jarvis Carry</div><div class="dd-meta">Delta-neutral · Binance funding capture · 8h income</div></div>
           <div class="dd-lbadge" style="color:#14b8a6;background:rgba(20,184,166,.12);border-color:rgba(20,184,166,.3)">L5</div>
         </div>
         <div class="dd-tagline">"No price prediction. No directional bet. Just collecting the tax that overleveraged longs pay every 8 hours."</div>
         <div class="dd-grid">
           <div class="dd-block">
             <div class="dd-bh" style="color:#14b8a6">What it does</div>
-            <div class="dd-bt">Shorts OKX perpetual futures and simultaneously longs the equivalent in spot — so price moves cancel out perfectly. What remains is the <b>funding payment</b> OKX charges longs every 8 hours when retail sentiment is bullish. The system collects this income while taking zero directional risk.</div>
+            <div class="dd-bt">Shorts Binance perpetual futures and simultaneously longs the equivalent in spot — so price moves cancel out perfectly. What remains is the <b>funding payment</b> Binance charges longs every 8 hours when retail sentiment is bullish. The system collects this income while taking zero directional risk.</div>
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#14b8a6">The AI layer</div>
-            <div class="dd-bt"><b>Claude Opus</b> weekly reflection — grades which carry strategy families produced the most durable income across the full coin universe, invents new entry/exit variants (different rate thresholds, OI filters, regime gates), and validates each on OKX funding rate history. The BTC regime from Jarvis Crypto feeds in as a live gate.</div>
+            <div class="dd-bt"><b>Claude Sonnet</b> weekly reflection — grades which carry strategy families produced the most durable income across the full coin universe, invents new entry/exit variants (different rate thresholds, OI filters, regime gates), and validates each on Binance funding rate history. The BTC regime from Jarvis Crypto feeds in as a live gate.</div>
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#14b8a6">Self-improvement engine</div>
             <div class="dd-bt"><b>L5:</b> Six strategy families tracked — rate threshold, momentum carry, regime-gated, OI-filtered, multi-coin rotation, liquidation-filtered. The invention engine biases toward families with higher gauntlet pass rates and better realized Sharpe. Currently monitoring in BEAR regime; activates when rates rise.</div>
           </div>
         </div>
-        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">OKX public API (funding rates)</span><span class="dd-chip">OKX (mark prices + OI)</span><span class="dd-chip">Jarvis Crypto (BTC regime)</span><span class="dd-chip">Coinalyze (liquidations)</span></div>
+        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">Binance FAPI (funding rates)</span><span class="dd-chip">Binance FAPI (mark prices + OI)</span><span class="dd-chip">Jarvis Crypto (BTC regime)</span></div>
       </div>
 
       <div class="dd-panel" id="dd-lab" style="--tc:#a855f7">
@@ -358,7 +358,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#a855f7">The AI layer</div>
-            <div class="dd-bt"><b>Claude Opus</b> (daily, autonomous) brainstorms a hypothesis, writes a backtest, runs it on out-of-sample data — then calls a <b>second Claude instance</b> to play adversarial red-team. The red-team's job is to find every way the strategy could fail: regime dependency, data snooping, cost sensitivity. If it survives the attack, it passes.</div>
+            <div class="dd-bt"><b>Claude Sonnet</b> (daily, autonomous) brainstorms a hypothesis, writes a backtest, runs it on out-of-sample data — then calls a <b>second Claude instance</b> to play adversarial red-team. The red-team's job is to find every way the strategy could fail: regime dependency, data snooping, cost sensitivity. If it survives the attack, it passes.</div>
           </div>
           <div class="dd-block">
             <div class="dd-bh" style="color:#a855f7">The 8-gate gauntlet</div>
@@ -398,7 +398,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <div class="ic">⚡</div>
       <div class="tag">Crypto · Mechanical quant</div>
       <h2 class="cname">Jarvis Scalper <span style="font-size:11px;font-weight:600;background:rgba(247,147,26,.15);color:#d97706;border-radius:20px;padding:2px 8px;vertical-align:middle;margin-left:4px">L5</span></h2>
-      <p class="cdesc">An <b>L5 self-learning</b> mechanical scalper across a 10-coin OKX perp basket. It validates every strategy via a cost-aware gauntlet, trades only proven edges as maker limits, and now <b>tracks which strategy families (reversion / momentum / funding) pass the gauntlet</b> — biasing its reflection engine toward proven families.</p>
+      <p class="cdesc">An <b>L5 self-learning</b> mechanical scalper across a 10-coin Binance perp basket. It validates every strategy via a cost-aware gauntlet, trades only proven edges as maker limits, and now <b>tracks which strategy families (reversion / momentum / funding) pass the gauntlet</b> — biasing its reflection engine toward proven families.</p>
       <div class="chips"><span class="chip">10-coin basket</span><span class="chip">Maker limits</span><span class="chip">Gauntlet-tested</span><span class="chip">Family L5</span></div>
       <div class="cstats"><div class="cstat"><div class="cs-l">Equity</div><div class="cs-v">$9,862</div></div><div class="cstat"><div class="cs-l">ROI</div><div class="cs-v" style="color:#f43f5e">-1.38%</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">3</div></div></div>
       <span class="enter">Enter dashboard <span class="arr">→</span></span>
@@ -418,8 +418,8 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <div class="ic">💰</div>
       <div class="tag">Carry · Delta-neutral income</div>
       <h2 class="cname">Jarvis Carry <span style="font-size:11px;font-weight:600;background:rgba(20,184,166,.15);color:#0d9488;border-radius:20px;padding:2px 8px;vertical-align:middle;margin-left:4px">L5</span></h2>
-      <p class="cdesc">A <b>delta-neutral carry desk</b> that collects OKX perpetual funding payments every 8 hours. It shorts the perp, longs the spot, and pockets the rate — zero directional exposure. The <b>L5 layer tracks which families of carry approach</b> (threshold, OI-filtered, regime-gated) produce the most durable income, and biases invention toward proven families.</p>
-      <div class="chips"><span class="chip">Delta-neutral</span><span class="chip">8h income</span><span class="chip">Family L5</span><span class="chip">OKX perps</span></div>
+      <p class="cdesc">A <b>delta-neutral carry desk</b> that collects Binance perpetual funding payments every 8 hours. It shorts the perp, longs the spot, and pockets the rate — zero directional exposure. The <b>L5 layer tracks which families of carry approach</b> (threshold, OI-filtered, regime-gated) produce the most durable income, and biases invention toward proven families.</p>
+      <div class="chips"><span class="chip">Delta-neutral</span><span class="chip">8h income</span><span class="chip">Family L5</span><span class="chip">Binance perps</span></div>
       <div class="cstats"><div class="cstat"><div class="cs-l">Equity</div><div class="cs-v">$10,000</div></div><div class="cstat"><div class="cs-l">ROI</div><div class="cs-v" style="color:#ffffff">+0.00%</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">1</div></div></div>
       <span class="enter">Enter dashboard <span class="arr">→</span></span>
     </a>
