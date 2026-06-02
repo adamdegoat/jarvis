@@ -46,7 +46,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 .grid-trading{grid-template-columns:repeat(5,1fr);gap:10px}
 .section-h{max-width:1080px;margin:42px auto 0;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:center}
 .section-h span{color:var(--dim);font-weight:500;letter-spacing:.4px;text-transform:none}
-.grid-lab{max-width:560px;margin-left:auto;margin-right:auto}
+.grid-lab{max-width:900px;margin-left:auto;margin-right:auto}
 .grid-feature{max-width:720px;margin:16px auto 0}
 .card-feature{border-color:rgba(20,184,166,.28)}
 .istat{display:inline-flex;align-items:center;gap:8px;margin-top:15px;padding:8px 14px;background:rgba(20,184,166,.1);border:1px solid rgba(20,184,166,.3);border-radius:10px;font-size:13px;color:#cdd8ec}
@@ -176,8 +176,8 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <svg class="brandmark" width="52" height="52" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b4079"/><stop offset="1" stop-color="#0e1a35"/></linearGradient></defs><rect width="28" height="28" rx="7" fill="url(#cg)"/><path d="M14 5.4 Q14 14 22.6 14 Q14 14 14 22.6 Q14 14 5.4 14 Q14 14 14 5.4 Z" fill="#fff"/></svg>
       <h1 class="wordmark">Jarvis</h1>
     </div>
-    <div class="status"><span class="dot"></span><span class="live">LIVE</span><span>· 6 autonomous systems · running 24/7</span><span style="color:var(--dim);letter-spacing:1px"> · updated <!--UPDATED--></span></div>
-    <p class="lede">Six <b>self-improving AI systems</b> — four now at <b>L5</b>, the level where the brain learns which <em>families</em> of approaches produce durable edges. They research, decide, grade themselves, and get sharper with every trade. Pick a desk and watch it think.</p>
+    <div class="status"><span class="dot"></span><span class="live">LIVE</span><span>· 7 autonomous systems · running 24/7</span><span style="color:var(--dim);letter-spacing:1px"> · updated <!--UPDATED--></span></div>
+    <p class="lede">Seven <b>self-improving AI systems</b> — five now at <b>L5</b>, one at <b>L9</b>. The L5 level is where the brain learns which <em>families</em> of approaches produce durable edges. L9 goes further — it invents, validates, deploys, and retires full trading bots entirely on its own. Pick a desk and watch it think.</p>
     <a class="track" href="https://adamdegoat.github.io/jarvisanalytics/">📊 View the live track record →</a>
   </div>
 
@@ -227,6 +227,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <button class="dd-tab" data-tab="forex" style="--tc:#3B82F6" role="tab"><span class="dd-dot" style="--tc:#3B82F6"></span>Forex</button>
       <button class="dd-tab" data-tab="carry" style="--tc:#14b8a6" role="tab"><span class="dd-dot" style="--tc:#14b8a6"></span>Carry</button>
       <button class="dd-tab" data-tab="lab" style="--tc:#a855f7" role="tab"><span class="dd-dot" style="--tc:#a855f7"></span>Lab</button>
+      <button class="dd-tab" data-tab="scout" style="--tc:#f59e0b" role="tab"><span class="dd-dot" style="--tc:#f59e0b"></span>Scout ✦</button>
     </div>
     <div class="dd-content">
 
@@ -368,6 +369,29 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
         <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">yfinance (equities, 2yr)</span><span class="dd-chip">Cross-asset macro</span><span class="dd-chip">Jarvis Stocks performance log</span><span class="dd-chip">Historical gauntlet results</span></div>
       </div>
 
+      <div class="dd-panel" id="dd-scout" style="--tc:#f59e0b">
+        <div class="dd-head">
+          <div><div class="dd-icon">🤖</div><div class="dd-name">Jarvis Scout</div><div class="dd-meta">Autonomous strategy factory · Discovers → Validates → Deploys → Retires</div></div>
+          <div class="dd-lbadge" style="color:#f59e0b;background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.3)">L9</div>
+        </div>
+        <div class="dd-tagline">"It doesn't just run strategies — it writes them, tries to kill them, turns survivors into live bots, then retires them when they stop working."</div>
+        <div class="dd-grid">
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#f59e0b">What it does</div>
+            <div class="dd-bt">A fully autonomous strategy factory. It discovers strategy hypotheses, runs each through a <b>7-gate gauntlet + adversarial red-team</b>, generates a complete trading bot for survivors, incubates it in paper trading, monitors for performance decay, and retires it when the edge disappears — all without human intervention.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#f59e0b">The AI layer</div>
+            <div class="dd-bt"><b>Claude Sonnet 4.6</b> (three LaunchAgents, 24/7). Each cycle: a Discovery agent brainstorms hypotheses from market regimes and historical patterns. A Validation agent runs the gauntlet. A Generation agent writes the full bot code. A Monitoring agent tracks live performance and calls retirement when Sharpe degrades. Execution via OKX and Futu.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#f59e0b">What L9 means</div>
+            <div class="dd-bt">L9 is the highest level in the fleet. Beyond L5 (family-level learning), L9 closes the full loop: <b>invent → validate → deploy → monitor → retire → learn why</b>. Every retired bot's failure reason feeds back into the discovery engine — making future hypotheses smarter. The system has never needed a human to suggest an idea.</div>
+          </div>
+        </div>
+        <div class="dd-sources"><span class="dd-sh">Execution routes</span><span class="dd-chip">OKX perps</span><span class="dd-chip">Futu / moomoo</span><span class="dd-chip">Paper incubation first</span><span class="dd-chip">Human review before live promotion</span></div>
+      </div>
+
     </div>
   </div>
 
@@ -426,8 +450,17 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 
   </div>
 
-  <div class="section-h">🔬 Research <span>· the lab that invents edges for the fleet</span></div>
+  <div class="section-h">🔬 Research <span>· the factory and lab that invent edges for the fleet</span></div>
   <div class="grid grid-lab">
+
+    <a class="card" href="https://adamdegoat.github.io/jarvisscout/" style="--accent:#f59e0b;--chip:rgba(245,158,11,.12);--glow:rgba(245,158,11,.24)">
+      <div class="ic">🤖</div>
+      <div class="tag">Strategy Factory · L9 · Fully autonomous</div>
+      <h2 class="cname">Jarvis Scout <span style="font-size:11px;font-weight:600;background:rgba(245,158,11,.15);color:#d97706;border-radius:20px;padding:2px 8px;vertical-align:middle;margin-left:4px">L9</span></h2>
+      <p class="cdesc">The most advanced system in the fleet. An <b>L9 autonomous strategy factory</b> that discovers hypotheses, runs a 7-gate gauntlet + adversarial red-team, <b>generates complete trading bots</b> for survivors, incubates them in paper trading, monitors decay, and retires them — all without human input. The only system in the fleet that writes its own bots from scratch.</p>
+      <div class="chips"><span class="chip">Invents bots</span><span class="chip">7-gate gauntlet</span><span class="chip">Red-team</span><span class="chip">OKX + Futu</span></div>
+      <span class="enter">Enter dashboard <span class="arr">→</span></span>
+    </a>
 
     <a class="card" href="https://adamdegoat.github.io/jarvislab/" style="--accent:#a855f7;--chip:rgba(168,85,247,.12);--glow:rgba(168,85,247,.24)">
       <div class="ic">🔬</div>
@@ -460,7 +493,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
   </div>
 
   <div class="foot">
-    Jarvis is a suite of six autonomous paper-trading &amp; research systems for education and research — <b>not financial advice</b>.<br>
+    Jarvis is a suite of seven autonomous paper-trading &amp; research systems for education and research — <b>not financial advice</b>.<br>
     <span class="sep">·</span> built by Adamdegoat <span class="sep">·</span> powered by Claude <span class="sep">·</span>
   </div>
 
