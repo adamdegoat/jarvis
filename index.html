@@ -46,7 +46,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 .grid-trading{grid-template-columns:repeat(5,1fr);gap:10px}
 .section-h{max-width:1080px;margin:42px auto 0;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:center}
 .section-h span{color:var(--dim);font-weight:500;letter-spacing:.4px;text-transform:none}
-.grid-lab{max-width:560px;margin-left:auto;margin-right:auto}
+.grid-lab{max-width:840px;margin-left:auto;margin-right:auto}
 .grid-feature{max-width:720px;margin:16px auto 0}
 .card-feature{border-color:rgba(20,184,166,.28)}
 .istat{display:inline-flex;align-items:center;gap:8px;margin-top:15px;padding:8px 14px;background:rgba(20,184,166,.1);border:1px solid rgba(20,184,166,.3);border-radius:10px;font-size:13px;color:#cdd8ec}
@@ -176,7 +176,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <svg class="brandmark" width="52" height="52" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b4079"/><stop offset="1" stop-color="#0e1a35"/></linearGradient></defs><rect width="28" height="28" rx="7" fill="url(#cg)"/><path d="M14 5.4 Q14 14 22.6 14 Q14 14 14 22.6 Q14 14 5.4 14 Q14 14 14 5.4 Z" fill="#fff"/></svg>
       <h1 class="wordmark">Jarvis</h1>
     </div>
-    <div class="status"><span class="dot"></span><span class="live">LIVE</span><span>· 6 autonomous systems · running 24/7</span><span style="color:var(--dim);letter-spacing:1px"> · updated 20:49 SGT</span></div>
+    <div class="status"><span class="dot"></span><span class="live">LIVE</span><span>· 7 autonomous systems · running 24/7</span><span style="color:var(--dim);letter-spacing:1px"> · updated 20:49 SGT</span></div>
     <p class="lede">Six <b>self-improving AI systems</b> — four now at <b>L5</b>, the level where the brain learns which <em>families</em> of approaches produce durable edges. They research, decide, grade themselves, and get sharper with every trade. Pick a desk and watch it think.</p>
     <a class="track" href="https://adamdegoat.github.io/jarvisanalytics/">📊 View the live track record →</a>
   </div>
@@ -227,6 +227,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <button class="dd-tab" data-tab="forex" style="--tc:#3B82F6" role="tab"><span class="dd-dot" style="--tc:#3B82F6"></span>Forex</button>
       <button class="dd-tab" data-tab="carry" style="--tc:#14b8a6" role="tab"><span class="dd-dot" style="--tc:#14b8a6"></span>Carry</button>
       <button class="dd-tab" data-tab="lab" style="--tc:#a855f7" role="tab"><span class="dd-dot" style="--tc:#a855f7"></span>Lab</button>
+      <button class="dd-tab" data-tab="scout" style="--tc:#06b6d4" role="tab"><span class="dd-dot" style="--tc:#06b6d4"></span>Scout</button>
     </div>
     <div class="dd-content">
 
@@ -368,6 +369,29 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
         <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">yfinance (equities, 2yr)</span><span class="dd-chip">Cross-asset macro</span><span class="dd-chip">Jarvis Stocks performance log</span><span class="dd-chip">Historical gauntlet results</span></div>
       </div>
 
+      <div class="dd-panel" id="dd-scout" style="--tc:#06b6d4">
+        <div class="dd-head">
+          <div><div class="dd-icon">🎯</div><div class="dd-name">Jarvis Scout</div><div class="dd-meta">Autonomous strategy factory · L9 · OKX + Futu/Moomoo</div></div>
+          <div class="dd-lbadge" style="color:#06b6d4;background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.3)">L9</div>
+        </div>
+        <div class="dd-tagline">"It doesn't just find edges — it builds the complete bot, runs it live, watches it die, and learns exactly why."</div>
+        <div class="dd-grid">
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#06b6d4">What it does</div>
+            <div class="dd-bt">Runs a <b>7-stage autonomous pipeline</b>: Discover → Gauntlet → Generate bot → Review → Incubate → Monitor → Retire &amp; Learn. Claude writes the complete bot.py from scratch. The bot runs as a live paper desk until it decays or proves out. Autopsies on every retirement feed a survival model that steers future discovery.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#06b6d4">The AI layer</div>
+            <div class="dd-bt"><b>Claude Sonnet 4.6</b> handles discovery (3 ideas/week), code generation (complete runnable bot.py from template), and adversarial red-team (a second Claude instance that tries to kill every strategy before it incubates). The 10-minute desk scheduler and daily monitor run as pure Python — no Claude in the live trading loop.</div>
+          </div>
+          <div class="dd-block">
+            <div class="dd-bh" style="color:#06b6d4">L9 progression</div>
+            <div class="dd-bt"><b>L6</b> (active): survival model biases discovery toward families with the best live track record. <b>L7</b>: gauntlet self-calibration — needs 20+ retirements. <b>L8</b>: objective rewriting — needs 12+ months of data. <b>L9</b>: causal edge-decay prediction — the long-term goal.</div>
+          </div>
+        </div>
+        <div class="dd-sources"><span class="dd-sh">Live data</span><span class="dd-chip">yfinance (stocks)</span><span class="dd-chip">OKX (crypto perps + spot)</span><span class="dd-chip">Futu/Moomoo (US + HK + SGX)</span><span class="dd-chip">Internal gauntlet history</span><span class="dd-chip">Survival model</span></div>
+      </div>
+
     </div>
   </div>
 
@@ -426,7 +450,7 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
 
   </div>
 
-  <div class="section-h">🔬 Research <span>· the lab that invents edges for the fleet</span></div>
+  <div class="section-h">🔬 Research &amp; Intelligence <span>· the systems that invent and manufacture edges</span></div>
   <div class="grid grid-lab">
 
     <a class="card" href="https://adamdegoat.github.io/jarvislab/" style="--accent:#a855f7;--chip:rgba(168,85,247,.12);--glow:rgba(168,85,247,.24)">
@@ -436,6 +460,16 @@ body{margin:0;background:#070b16;color:var(--ink);font-family:'Inter',system-ui,
       <p class="cdesc">An autonomous quant researcher that invents its own strategies — then tries to kill each one through an 8-gate gauntlet (out-of-sample firewall, robustness, alpha-vs-benchmark, adversarial red-team). Survivors reach the book — and now feed live signals to the Stocks desk.</p>
       <div class="chips"><span class="chip">Invents strategies</span><span class="chip">8-gate gauntlet</span><span class="chip">Red-team</span><span class="chip">Daily</span></div>
       <div class="cstats"><div class="cstat"><div class="cs-l">Validated</div><div class="cs-v">1</div></div><div class="cstat"><div class="cs-l">Incubating</div><div class="cs-v">4</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">3</div></div></div>
+      <span class="enter">Enter dashboard <span class="arr">→</span></span>
+    </a>
+
+    <a class="card" href="https://adamdegoat.github.io/jarvisscout/" style="--accent:#06b6d4;--chip:rgba(6,182,212,.12);--glow:rgba(6,182,212,.24)">
+      <div class="ic">🎯</div>
+      <div class="tag">Meta-system · L9 · Strategy factory</div>
+      <h2 class="cname">Jarvis Scout</h2>
+      <p class="cdesc">An <b>L9 autonomous strategy factory</b> that discovers trading edges, validates each through a 7-gate gauntlet + adversarial red-team, writes the complete trading bot via Claude, incubates it as a live paper desk, monitors for decay, retires failures with autopsies, and learns what separates survivors from noise. The loop repeats indefinitely.</p>
+      <div class="chips"><span class="chip">Discovers edges</span><span class="chip">Writes bots</span><span class="chip">7-gate gauntlet</span><span class="chip">Self-improving</span></div>
+      <div class="cstats"><div class="cstat"><div class="cs-l">Discovered</div><div class="cs-v">3</div></div><div class="cstat"><div class="cs-l">Gauntlet pass</div><div class="cs-v">3</div></div><div class="cstat"><div class="cs-l">Days live</div><div class="cs-v">1</div></div></div>
       <span class="enter">Enter dashboard <span class="arr">→</span></span>
     </a>
 
